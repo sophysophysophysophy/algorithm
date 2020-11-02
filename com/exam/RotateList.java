@@ -1,6 +1,5 @@
 package exam;
 //https://leetcode.com/problems/rotate-list/
-//Complete
 public class RotateList {
     public static void main(String[] args) {
 //        Input: 1->2->3->4->5->NULL, k = 2

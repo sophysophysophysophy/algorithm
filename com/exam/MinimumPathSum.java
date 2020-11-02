@@ -1,6 +1,6 @@
 package exam;
+
 //https://leetcode.com/problems/minimum-path-sum/
-//TODO
 public class MinimumPathSum {
     public static void main(String[] args) {
         System.out.println(minPathSum(new int[][] {
@@ -10,23 +10,28 @@ public class MinimumPathSum {
                                                                 }));
     }
 
+//    DP
     public static int minPathSum(int[][] grid) {
-        int[][] sumGrid = new int[grid.length][grid[0].length];
+        int answer = 0;
+        int n = grid.length;
+        int m = grid[0].length;
+        int[][] sumGrid = new int[n][m];
 
-        for(int i = 0 ; i < grid.length; i++) {
-            for( int j = 0 ; j < grid[i].length; j++) {
-                int min = 0;
+        for(int i = 0 ; i < n; i++) {
+            for( int j = 0 ; j < m; j++) {
+                int min = Integer.MAX_VALUE;
                 if(i - 1 >= 0) {
-                    min = grid[i-1][j];
+                    min = sumGrid[i-1][j];
                 }
                 if(j - 1 >= 0) {
-                    min = Math.min(min, grid[i][j-1]);
+                    min = Math.min(min, sumGrid[i][j-1]);
                 }
-                sumGrid[i][j] = min + grid[i][j];
+                if(i == 0 && j == 0 ) sumGrid[i][j] = grid[i][j];
+                else sumGrid[i][j] = min + grid[i][j];
             }
         }
 
-        return sumGrid[grid.length-1][grid[0].length];
+        return sumGrid[n-1][m-1];
 
     }
 }
