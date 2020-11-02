@@ -11,7 +11,6 @@ public class MinimumPathSum {
     }
 
     public static int minPathSum(int[][] grid) {
-        int answer = 0;
         int[][] sumGrid = new int[grid.length][grid[0].length];
 
         for(int i = 0 ; i < grid.length; i++) {
@@ -27,7 +26,7 @@ public class MinimumPathSum {
             }
         }
 
-        return answer;
+        return sumGrid[grid.length-1][grid[0].length];
 
     }
 }
