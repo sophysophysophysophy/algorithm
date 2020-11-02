@@ -3,7 +3,7 @@ package exam;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//TODO
 public class MergeIntervals {
 
     public static void main(String[] args) {
