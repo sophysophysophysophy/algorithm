@@ -2,12 +2,8 @@ package exam;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-<<<<<<< HEAD
 
-=======
-import java.util.List;
 //TODO
->>>>>>> 7afa8b4004a26200d2aaad95fa7bb511fdb733bd
 public class MergeIntervals {
 
     public static void main(String[] args) {
