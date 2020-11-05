@@ -1,14 +1,14 @@
 package exam;
 
-import java.util.Stack;
-import java.util.TreeSet;
+import java.util.*;
 
 //https://leetcode.com/problems/min-stack/
-//TODO
+//Complete
 public class MinStack {
 
     private Stack<Integer> stack;
-    private TreeSet<Integer> set;
+
+    private List<Integer> list;
 
     public static void main(String[] args) {
         MinStack minStack = new MinStack();
@@ -21,6 +21,7 @@ public class MinStack {
         minStack.pop();
         minStack.push(-1);
         minStack.push(10);
+        minStack.push(10);
 
         System.out.println(minStack.getMin());
     }
@@ -28,30 +29,29 @@ public class MinStack {
     /** initialize your data structure here. */
     public MinStack() {
         stack = new Stack<>();
-        set = new TreeSet<>();
+        list = new ArrayList<>();
     }
 
     public void push(int x) {
         stack.push(x);
-        set.add(x);
+        list.add(x);
+        Collections.sort(list);
     }
 
     public void pop() {
         int pop = stack.pop();
-        set.remove(pop);
+        list.remove(Integer.valueOf(pop));
     }
 
     public int top() {
         int top = stack.pop();
-        set.remove(top);
         stack.push(top);
         return top;
     }
 
     public int getMin() {
-//  min
-        return set.first();
 
-
+//  return a min value
+        return list.get(0);
     }
 }
