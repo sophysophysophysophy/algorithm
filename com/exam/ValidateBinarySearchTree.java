@@ -10,14 +10,15 @@ public class ValidateBinarySearchTree {
         TreeNode node3 = new TreeNode(15, node4,node5);
         TreeNode node2 = new TreeNode(5);
 
-        TreeNode root = new TreeNode(2,node2,node3);
+        TreeNode node6 = new TreeNode(1);
+        TreeNode node7 = new TreeNode(3);
+        TreeNode root = new TreeNode(2,node6, node7);
         System.out.println(isValidBST(root));
     }
 
     public static boolean answer;
 //    dfs
     public static boolean isValidBST(TreeNode root) {
-        answer = true;
         if(root != null) {
              dfsBST(null, root);
         }
@@ -26,7 +27,6 @@ public class ValidateBinarySearchTree {
     }
 
     public static void dfsBST(TreeNode parent, TreeNode root) {
-        if(!answer) return;
         if(root.left != null) {
 //            Compare
             if(root.left.val < root.val) {

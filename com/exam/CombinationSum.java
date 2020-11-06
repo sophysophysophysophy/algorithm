@@ -11,11 +11,11 @@ public class CombinationSum {
         System.out.println(combinationSum(new int[] {1,2,3,4,5,6,7}, 6));
     }
 
+
+    static List<List<Integer>> answer = new ArrayList<>();
+
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
 //        dfs
-        List<List<Integer>> answer = new ArrayList<>();
-
-
 //        Filtering valid candidates
         int[] validCand = new int[0] ;
         for(int i = 0 ; i < candidates.length; i++) {
@@ -28,7 +28,7 @@ public class CombinationSum {
 //        Searching
         for(int i = 0 ; i < validCand.length; i++) {
             List<Integer> nowList = new ArrayList<>();
-            dfs(answer, validCand, i, nowList, 0, target);
+            dfs(validCand, nowList, validCand[i], target);
         }
 
 
@@ -36,11 +36,18 @@ public class CombinationSum {
     }
 
 
-    public static void dfs(List<List<Integer>> list , int[] validCand, int idx, List<Integer> nowList, int nowValue, int target) {
-        for(int i = idx; i < validCand.length; i++) {
-            if(validCand[i] + nowValue > target)  {
-
+    public static void dfs(int[] validCand, List<Integer> nowList, int nowValue, int target) {
+        if(nowValue == target) {
+            ArrayList<Integer> answerList = new ArrayList<>(nowList);
+            answer.add(answerList);
+        } else if( nowValue < target) {
+            for(int i = 0; i < validCand.length; i++) {
+                if(validCand[i] + nowValue > target)  {
+                    nowList.add(validCand[i]);
+                    dfs(validCand, nowList, nowValue+validCand[i], target);
+                }
             }
         }
+
     }
 }
