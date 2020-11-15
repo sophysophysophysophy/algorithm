@@ -1,4 +1,7 @@
-package exam;
+package exam.uploaded;
+
+import exam.ListNode;
+
 //https://leetcode.com/problems/rotate-list/
 public class RotateList {
     public static void main(String[] args) {

@@ -1,5 +1,7 @@
-package exam;
+package exam.todo;
 
+
+import exam.TreeNode;
 
 //https://leetcode.com/problems/validate-binary-search-tree/
 //TODO

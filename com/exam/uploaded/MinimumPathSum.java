@@ -1,4 +1,4 @@
-package exam;
+package exam.uploaded;
 
 //https://leetcode.com/problems/minimum-path-sum/
 public class MinimumPathSum {

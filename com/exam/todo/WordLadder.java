@@ -1,4 +1,4 @@
-package exam;
+package exam.todo;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
