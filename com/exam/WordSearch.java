@@ -4,7 +4,6 @@ package exam;
 import java.util.Stack;
 
 //https://leetcode.com/problems/word-search/
-//Complete
 public class WordSearch {
     public static void main(String[] args) {
         char[][] chars = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};

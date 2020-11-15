@@ -3,7 +3,6 @@ package exam;
 import java.util.*;
 
 //https://leetcode.com/problems/min-stack/
-//Complete
 public class MinStack {
 
     private Stack<Integer> stack;

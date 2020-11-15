@@ -4,7 +4,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 //https://leetcode.com/problems/lru-cache/
-//Complete
 public class LRUCache {
 
     public static void main(String[] args) {
