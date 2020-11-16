@@ -32,10 +32,11 @@ public class WordLadderII {
             String nowWord = wordList.get(i);
             if (checkVal(beginWord, nowWord)) {
                 if (nowWord.equals(endWord)) {
+                    answer.add(Arrays.asList(beginWord, nowWord));
                     return answer;
                 }
                 flag[i] = true;
-                queue.add(new StrSet(nowWord, 2, new ArrayList<>(new )));
+                queue.add(new StrSet(nowWord, 2, Arrays.asList(beginWord, nowWord)));
             }
         }
 
@@ -57,11 +58,20 @@ public class WordLadderII {
                         if(!minValFlag) {
                             minValFlag = true;
                             minValCnt = nowSet.circleVal + 1;
-                        }else if( minValCnt == nowSet.circleVal + 1){
-                            answer.add()
+                            List<String> nowSetList = nowSet.getList();
+                            nowSetList.add(nextWord);
+                            answer.add(nowSetList);
+                        } else if (minValCnt == nowSet.circleVal + 1) {
+                            List<String> nowSetList = nowSet.getList();
+                            nowSetList.add(nextWord);
+                            answer.add(nowSetList);
                         }
                     }
-                    queue.add(new StrSet(nextWord, nowSet.circleVal + 1));
+                    if(minValFlag && nowSet.getCircleVal() + 1 < minValCnt) {
+                        List<String> nowList = new ArrayList<>(nowSet.getList());
+                        nowList.add(nextWord);
+                        queue.add(new StrSet(nextWord, nowSet.circleVal + 1, nowList));
+                    }
                 }
             }
 
