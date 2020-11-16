@@ -7,8 +7,12 @@ import java.util.*;
 public class WordLadderII {
 
     public static void main(String[] args) {
-        System.out.println(findLadders("hit", "cog", Arrays.asList("hot", "dot", "dog", "lot", "log", "cog")));
+//        System.out.println(findLadders("hit", "cog", Arrays.asList("hot", "dot", "dog", "lot", "log", "cog")));
 //        System.out.println(findLadders("a","c", Arrays.asList("a","b", "c")));
+//        System.out.println(findLadders("hot", "dog", Arrays.asList("hot", "dog", "dot")));
+        System.out.println(findLadders("red",
+                "tax",
+                        Arrays.asList("ted","tex","red","tax","tad","den","rex","pee")));
     }
 
     public static List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
@@ -36,7 +40,8 @@ public class WordLadderII {
                     return answer;
                 }
                 flag[i] = true;
-                queue.add(new StrSet(nowWord, 2, Arrays.asList(beginWord, nowWord)));
+                boolean[] clone = flag.clone();
+                queue.add(new StrSet(nowWord, 2, Arrays.asList(beginWord, nowWord), clone));
             }
         }
 
@@ -52,26 +57,29 @@ public class WordLadderII {
             String nowWord = nowSet.getWord();
             for (int i = 0; i < wordList.size(); i++) {
                 String nextWord = wordList.get(i);
-                if(!flag[i] && checkVal(nowWord, nextWord)){
-                    flag[i] = true;
+                if(!nowSet.getBooleans()[i] && checkVal(nowWord, nextWord)){
                     if (nextWord.equals(endWord)) {
                         if(!minValFlag) {
                             minValFlag = true;
                             minValCnt = nowSet.circleVal + 1;
-                            List<String> nowSetList = nowSet.getList();
+                            List<String> nowSetList = new ArrayList<>(nowSet.getList());
                             nowSetList.add(nextWord);
                             answer.add(nowSetList);
                         } else if (minValCnt == nowSet.circleVal + 1) {
-                            List<String> nowSetList = nowSet.getList();
+                            List<String> nowSetList = new ArrayList<>(nowSet.getList());
                             nowSetList.add(nextWord);
                             answer.add(nowSetList);
                         }
+                        continue;
                     }
-                    if(minValFlag && nowSet.getCircleVal() + 1 < minValCnt) {
-                        List<String> nowList = new ArrayList<>(nowSet.getList());
-                        nowList.add(nextWord);
-                        queue.add(new StrSet(nextWord, nowSet.circleVal + 1, nowList));
+                    boolean[] clone = nowSet.getBooleans().clone();
+                    clone[i] = true;
+                    if(minValFlag && nowSet.getCircleVal() + 1 > minValCnt) {
+                       continue;
                     }
+                    List<String> nowList = new ArrayList<>(nowSet.getList());
+                    nowList.add(nextWord);
+                    queue.add(new StrSet(nextWord, nowSet.circleVal + 1, nowList, clone));
                 }
             }
 
@@ -99,11 +107,21 @@ public class WordLadderII {
         private String word;
         private int circleVal;
         private List<String> list;
+        private boolean[] booleans;
 
-        public StrSet(String word, int circleVal, List<String> list) {
+        public StrSet(String word, int circleVal, List<String> list, boolean[] booleans) {
             this.word = word;
             this.circleVal = circleVal;
             this.list = list;
+            this.booleans=booleans;
+        }
+
+        public boolean[] getBooleans() {
+            return booleans;
+        }
+
+        public void setBooleans(boolean[] booleans) {
+            this.booleans = booleans;
         }
 
         public int getCircleVal() {

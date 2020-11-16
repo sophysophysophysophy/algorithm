@@ -3,7 +3,8 @@ package exam.todo;
 
 //https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class WordDictionary {
     public static void main(String[] args) {
@@ -26,8 +27,9 @@ public class WordDictionary {
 
     /** Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter. */
     public boolean search(String word) {
-        StringBuilder stringBuilder = new StringBuilder();
+        boolean answer = false;
 
+        StringBuilder stringBuilder = new StringBuilder();
 //        Creating a pattern
 
 
@@ -38,6 +40,6 @@ public class WordDictionary {
 
 //        Finding in the set
 
-
+        return answer;
     }
 }
