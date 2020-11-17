@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
