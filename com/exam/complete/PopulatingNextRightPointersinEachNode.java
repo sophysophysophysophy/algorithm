@@ -6,6 +6,7 @@ package exam.complete;
 import exam.Node;
 
 import java.util.ArrayDeque;
+import java.util.Queue;
 
 public class PopulatingNextRightPointersinEachNode {
     public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class PopulatingNextRightPointersinEachNode {
 
 //        The root node doesn't have a next node
 //        looping with root's children
-        ArrayDeque<ForFindNodeSet> queue = new ArrayDeque<>();
+        Queue<ForFindNodeSet> queue = new ArrayDeque<>();
 
 //        Exception Handling
         if (root == null || root.left == null) return root;
