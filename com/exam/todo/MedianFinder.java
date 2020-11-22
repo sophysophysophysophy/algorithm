@@ -3,6 +3,10 @@ package exam.todo;
 
 //https://leetcode.com/problems/find-median-from-data-stream/
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class MedianFinder {
 
     public static void main(String[] args) {
@@ -31,20 +35,27 @@ public class MedianFinder {
 
     private int sum ;
     private int cnt;
-
+    private List<Integer> arr ;
     /** initialize your data structure here. */
     public MedianFinder() {
         sum = 0 ;
         cnt = 0;
+        arr = new ArrayList<>();
     }
 
     public void addNum(int num) {
         sum += num;
-        if(num != 0 ) cnt++;
-
+        if (num != 0) {
+            cnt++;
+            arr.add(num);
+            Collections.sort(arr);
+        }
     }
 
     public double findMedian() {
-        return cnt == 0 ? 0 : (double) sum / cnt;
+
+        return cnt > 0 ? cnt % 2 == 0 ?  (double) sum / cnt  : arr.get(cnt/2) : 0;
     }
 }
+
+//[null,null,6.00000,null,8.00000,null,6.00000,null,6.00000,null,6.00000,null,5.50000,null,6.00000,null,5.50000,null,5.00000,null,4.00000,null,3.00000]
