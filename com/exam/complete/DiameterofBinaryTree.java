@@ -1,4 +1,4 @@
-package exam.todo;
+package exam.complete;
 
 
 import exam.TreeNode;
@@ -13,7 +13,6 @@ public class DiameterofBinaryTree {
         TreeNode treeNode = new TreeNode(1, treeNode3, treeNode4);
 
 
-
         System.out.println(diameterOfBinaryTree(treeNode));
     }
 
@@ -21,15 +20,17 @@ public class DiameterofBinaryTree {
     static int answer;
     public static int diameterOfBinaryTree(TreeNode root) {
 
-        answer = diameterOfBinaryTreeDFS(root);
+        if(root == null) return 0;
+        answer = 0;
+        diameterOfBinaryTreeDFS(root);
         return answer;
     }
 
     private static int diameterOfBinaryTreeDFS(TreeNode root) {
-        if(root.left == null && root.right == null) return 0;
-        int leftVal = root.left == null ? 0 : diameterOfBinaryTree(root.left);
-        int rightVal = root.right == null ? 0 : diameterOfBinaryTree(root.right);
-        answer = Math.max(leftVal + rightVal + 1, answer);
+        if(root.left == null && root.right == null) return 1;
+        int leftVal = root.left == null ? 0 : diameterOfBinaryTreeDFS(root.left);
+        int rightVal = root.right == null ? 0 : diameterOfBinaryTreeDFS(root.right);
+        answer = Math.max(leftVal + rightVal , answer);
 
         return Math.max(leftVal + 1, rightVal + 1);
     }
