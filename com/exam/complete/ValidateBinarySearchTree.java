@@ -4,7 +4,6 @@ package exam.complete;
 import exam.TreeNode;
 
 //https://leetcode.com/problems/validate-binary-search-tree/
-//TODO
 public class ValidateBinarySearchTree {
     public static void main(String[] args) {
         TreeNode node6 = new TreeNode(1);
