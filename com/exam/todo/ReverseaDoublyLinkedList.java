@@ -3,7 +3,7 @@ package exam.todo;
 
 import exam.DoublyLinkedListNode;
 
-public class ReverseaDoublyLinkedList {
+public class ReverseADoublyLinkedList {
     static DoublyLinkedListNode reverse(DoublyLinkedListNode head) {
 
         head = head.next;
