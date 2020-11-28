@@ -17,7 +17,7 @@ public class ConvertSortedListtoBinarySearchTree {
 
         if(head == null) return null;
 
-//        1. Making a array
+//        1. Make a array
         List<Integer> list = new ArrayList<>();
         while (head.next != null) {
             list.add(head.val);

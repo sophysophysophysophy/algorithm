@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 //https://www.hackerrank.com/challenges/2d-array/problem
 public class HourglassSum {

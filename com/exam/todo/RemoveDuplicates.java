@@ -5,22 +5,34 @@ import exam.SinglyLinkedListNode;
 
 //https://www.hackerrank.com/challenges/delete-duplicate-value-nodes-from-a-sorted-linked-list/problem
 public class RemoveDuplicates {
+    public static void main(String[] args) {
+        SinglyLinkedListNode node4 = new SinglyLinkedListNode(4, null);
+        SinglyLinkedListNode node6 = new SinglyLinkedListNode(4, node4);
+        SinglyLinkedListNode node3 = new SinglyLinkedListNode(3, node6);
+        SinglyLinkedListNode node2 = new SinglyLinkedListNode(2, node3);
+        SinglyLinkedListNode node7 = new SinglyLinkedListNode(2, node2);
+        SinglyLinkedListNode node5 = new SinglyLinkedListNode(2, node7);
+        SinglyLinkedListNode node1 = new SinglyLinkedListNode(2, node5);
+        removeDuplicates(node1);
+    }
+
     static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
-        SinglyLinkedListNode returnHead = head;
-        int preValue = head.data;
-        SinglyLinkedListNode preNode = head;
-        int nowValue = 0;
-        while (head.next != null) {
-            nowValue = head.data;
 
-            if (preValue == nowValue) {
-                preNode.next = head.next;
-            } else preValue = nowValue;
+        if(head.next == null) return head;
+        SinglyLinkedListNode prevNode = head;
+        SinglyLinkedListNode startNode = head.next;
 
-            head = head.next;
+        while (startNode.next != null) {
+            if (startNode.data != prevNode.data) {
+                prevNode.next = startNode;
+                prevNode = startNode;
+            }
+            startNode = startNode.next;
         }
 
+        if (startNode.data == prevNode.data) prevNode.next = null;
 
-        return returnHead;
+
+        return head;
     }
 }
