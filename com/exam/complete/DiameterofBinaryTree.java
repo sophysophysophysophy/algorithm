@@ -1,9 +1,9 @@
 package exam.complete;
 
+//https://leetcode.com/problems/diameter-of-binary-tree/
 
 import exam.TreeNode;
 
-//https://leetcode.com/problems/diameter-of-binary-tree/
 public class DiameterofBinaryTree {
     public static void main(String[] args) {
         TreeNode treeNode1 = new TreeNode(4);

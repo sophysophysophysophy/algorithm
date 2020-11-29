@@ -1,12 +1,12 @@
 package exam.complete;
 
+//https://leetcode.com/problems/symmetric-tree/
 
 import exam.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-//https://leetcode.com/problems/symmetric-tree/
 public class SymmetricTree {
 
 //    recursive

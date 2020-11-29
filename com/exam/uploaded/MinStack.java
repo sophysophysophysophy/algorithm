@@ -1,8 +1,12 @@
 package exam.uploaded;
 
-import java.util.*;
-
 //https://leetcode.com/problems/min-stack/
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
+
 public class MinStack {
 
     private Stack<Integer> stack;

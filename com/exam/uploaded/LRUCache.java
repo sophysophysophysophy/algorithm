@@ -1,9 +1,9 @@
 package exam.uploaded;
+//https://leetcode.com/problems/lru-cache/
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-//https://leetcode.com/problems/lru-cache/
 public class LRUCache {
 
     public static void main(String[] args) {

@@ -1,10 +1,10 @@
 package exam.complete;
 
+//https://leetcode.com/problems/course-schedule/
 
 import java.util.ArrayList;
 import java.util.List;
 
-//https://leetcode.com/problems/course-schedule/
 public class CourseSchedule {
 
     public static void main(String[] args) {

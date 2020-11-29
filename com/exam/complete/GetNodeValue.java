@@ -1,12 +1,12 @@
 package exam.complete;
 
+//https://www.hackerrank.com/challenges/get-the-value-of-the-node-at-a-specific-position-from-the-tail/problem
 
 import exam.SinglyLinkedListNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//https://www.hackerrank.com/challenges/get-the-value-of-the-node-at-a-specific-position-from-the-tail/problem
 public class GetNodeValue {
 
     static int getNode(SinglyLinkedListNode head, int positionFromTail) {

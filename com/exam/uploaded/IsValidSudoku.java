@@ -1,8 +1,8 @@
 package exam.uploaded;
 
+//https://leetcode.com/problems/valid-sudoku/
 import java.util.HashSet;
 import java.util.Set;
-//https://leetcode.com/problems/valid-sudoku/
 public class IsValidSudoku {
     public static void main(String[] args) {
        char[][] board = new char[][]{{'5','3','.','.','7','.','.','.','.'}

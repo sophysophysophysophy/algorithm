@@ -1,9 +1,10 @@
 package exam.uploaded;
 
+//https://leetcode.com/problems/number-of-islands/
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-//https://leetcode.com/problems/number-of-islands/
 //Complete
 public class NumberofIslands {
 

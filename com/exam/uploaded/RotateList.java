@@ -1,8 +1,8 @@
 package exam.uploaded;
 
-import exam.ListNode;
 
 //https://leetcode.com/problems/rotate-list/
+import exam.ListNode;
 public class RotateList {
     public static void main(String[] args) {
 //        Input: 1->2->3->4->5->NULL, k = 2
