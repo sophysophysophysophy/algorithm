@@ -1,6 +1,7 @@
 package exam.todo;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 //https://leetcode.com/problems/reorganize-string/
@@ -27,11 +28,10 @@ public class ReorganizeString {
             }
         }
 
-        return "";
 
 //        Optional : java8
-//        Optional<String> answer = list.stream().filter(ReorganizeString::checkValid).findFirst();
-//        return answer.orElse("");
+        Optional<String> answer = list.stream().filter(ReorganizeString::checkValid).findFirst();
+        return answer.orElse("");
     }
 
     private static boolean checkValid(String o) {

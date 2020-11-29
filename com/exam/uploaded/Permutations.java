@@ -26,6 +26,7 @@ public class Permutations {
 
     public static void dfs(List<Integer> paramList, int[] nums, boolean[] boolList) {
         if(paramList.size() == nums.length) {
+//            Deep copy for list
             List<Integer> answerList = new ArrayList<>(paramList);
             answer.add(answerList);
         }else if(paramList.size() < nums.length){
