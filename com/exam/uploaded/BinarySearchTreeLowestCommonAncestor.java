@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 //https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem
 
 import exam.Node;

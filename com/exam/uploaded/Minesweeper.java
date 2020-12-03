@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 //https://leetcode.com/problems/minesweeper/
 
@@ -56,18 +56,9 @@ public class Minesweeper {
                             flag[nextX][nextY] = true;
                         }
                     }
-
-
                 }
             }
-
-
-
-            }
-
-
-
-
+        }
         return board;
     }
 

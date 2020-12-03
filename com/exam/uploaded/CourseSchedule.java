@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 //https://leetcode.com/problems/course-schedule/
 
@@ -15,8 +15,6 @@ public class CourseSchedule {
 
     static boolean answerFlag ;
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
-        boolean answer = true;
-        boolean[] flag = new boolean[numCourses];
         List<List<Integer>> courseRelList = new ArrayList<>();
         for (int i = 0; i < numCourses; i++) {
             List<Integer> list = new ArrayList<>();
@@ -33,7 +31,7 @@ public class CourseSchedule {
             else courseRelList.get(postCourse).add(preCourse);
         }
 
-        return answer;
+        return true;
     }
 
     private static void checkCanFinish(int preCourse, List<List<Integer>> courseRelList, int target) {

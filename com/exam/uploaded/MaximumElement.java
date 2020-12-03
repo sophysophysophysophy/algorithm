@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 //https://www.hackerrank.com/challenges/maximum-element/problem
 
 
@@ -24,18 +24,16 @@ public class MaximumElement {
                 StringTokenizer tokenizer = new StringTokenizer(bufferedReader.readLine()," ");
                 int nowK = parseInt(tokenizer.nextToken());
                 switch (nowK) {
-                    case 1:
-                        int nowValue = parseInt(tokenizer.nextToken());;
+                    case 1 -> {
+                        int nowValue = parseInt(tokenizer.nextToken());
                         stack.push(nowValue);
                         queue.add(nowValue);
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         Integer pop = stack.pop();
                         queue.remove(pop);
-                        break;
-                    default:
-                        System.out.println(queue.peek());
-                        break;
+                    }
+                    default -> System.out.println(queue.peek());
                 }
             }
         }

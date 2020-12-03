@@ -1,8 +1,10 @@
-package exam.complete;
+package exam.uploaded;
 
 //https://leetcode.com/problems/diameter-of-binary-tree/
 
 import exam.TreeNode;
+
+import static java.lang.Math.max;
 
 public class DiameterofBinaryTree {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ public class DiameterofBinaryTree {
 
 
     static int answer;
-    public static int diameterOfBinaryTree(TreeNode root) {
+    private static int diameterOfBinaryTree(TreeNode root) {
 
         if(root == null) return 0;
         answer = 0;
@@ -30,8 +32,8 @@ public class DiameterofBinaryTree {
         if(root.left == null && root.right == null) return 1;
         int leftVal = root.left == null ? 0 : diameterOfBinaryTreeDFS(root.left);
         int rightVal = root.right == null ? 0 : diameterOfBinaryTreeDFS(root.right);
-        answer = Math.max(leftVal + rightVal , answer);
+        answer = max(leftVal + rightVal , answer);
 
-        return Math.max(leftVal + 1, rightVal + 1);
+        return max(leftVal + 1, rightVal + 1);
     }
 }

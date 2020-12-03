@@ -5,8 +5,11 @@ package exam.complete;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
+
+import static java.lang.Integer.valueOf;
+import static java.util.Arrays.copyOfRange;
+import static java.util.Collections.sort;
 
 public class CombinationSum {
     public static void main(String[] args) {
@@ -22,7 +25,7 @@ public class CombinationSum {
         int[] validCand = candidates;
         for(int i = 0 ; i < candidates.length; i++) {
             if(candidates[i] > target) {
-                validCand = Arrays.copyOfRange(candidates, 0, i);
+                validCand = copyOfRange(candidates, 0, i);
                 break;
             }
         }
@@ -42,14 +45,14 @@ public class CombinationSum {
     public static void dfs(int[] validCand, List<Integer> nowList, int nowValue, int target, List<List<Integer>> answer) {
         if(nowValue == target) {
             ArrayList<Integer> answerList = new ArrayList<>(nowList);
-            Collections.sort(answerList);
+            sort(answerList);
             if(!answer.contains(answerList)) answer.add(answerList);
         } else if( nowValue < target) {
             for(int i = 0; i < validCand.length; i++) {
                 if(validCand[i] + nowValue <= target)  {
                     nowList.add(validCand[i]);
                     dfs(validCand, nowList, nowValue+validCand[i], target, answer);
-                    nowList.remove(Integer.valueOf(validCand[i]));
+                    nowList.remove(valueOf(validCand[i]));
                 }
             }
         }

@@ -15,8 +15,7 @@ public class BalancedBrackets {
             else {
                 if(stack.empty()) return answer;
                 Character nowChar = stack.pop();
-                if((i == '}' && nowChar == '{') || (i == ']' && nowChar == '[') || (i == ')' && nowChar == '(')) continue;
-                else return answer;
+                if(!((i == '}' && nowChar == '{') || (i == ']' && nowChar == '[') || (i == ')' && nowChar == '('))) return answer;
             }
         }
         return stack.empty() ? "YES" : answer;
