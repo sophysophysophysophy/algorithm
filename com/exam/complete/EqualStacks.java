@@ -1,4 +1,4 @@
-package exam.todo;
+package exam.complete;
 //https://www.hackerrank.com/challenges/equal-stacks/problem
 
 import java.util.Arrays;
