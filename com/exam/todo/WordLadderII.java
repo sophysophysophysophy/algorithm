@@ -3,7 +3,6 @@ package exam.todo;
 import java.util.*;
 
 //https://leetcode.com/problems/word-ladder-ii/
-//TODO
 public class WordLadderII {
 
     public static void main(String[] args) {
