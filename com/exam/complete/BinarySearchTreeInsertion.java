@@ -1,6 +1,6 @@
 package exam.complete;
 //https://www.hackerrank.com/challenges/binary-search-tree-insertion/problem
-//TODO UPLOAD
+
 import exam.Node;
 
 public class BinarySearchTreeInsertion {
@@ -11,7 +11,6 @@ public class BinarySearchTreeInsertion {
         insert(root, 1);
         insert(root, 7);
         insert(root, 6);
-        System.out.println("now Val");
     }
     public static Node insert(Node root, int data) {
         if(root == null) return new Node(data);

@@ -1,6 +1,6 @@
 package exam.complete;
 //https://www.hackerrank.com/challenges/equal-stacks/problem
-
+//TODO UPLOAD
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -12,6 +12,7 @@ public class EqualStacks {
     }
     public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
 
+//        Reversing lists
         Collections.reverse(h1);
         Collections.reverse(h2);
         Collections.reverse(h3);

@@ -21,17 +21,15 @@ public class QHEAP1 {
                 StringTokenizer tokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
                 int nowK = parseInt(tokenizer.nextToken());
                 switch (nowK) {
-                    case 1:
+                    case 1 -> {
                         int nowValue = parseInt(tokenizer.nextToken());
                         queue.add(nowValue);
-                        break;
-                    case 2:
-                        nowValue = parseInt(tokenizer.nextToken());
+                    }
+                    case 2 -> {
+                        int nowValue = parseInt(tokenizer.nextToken());
                         queue.remove(nowValue);
-                        break;
-                    default:
-                        System.out.println(queue.peek());
-                        break;
+                    }
+                    default -> System.out.println(queue.peek());
                 }
             }
         }
