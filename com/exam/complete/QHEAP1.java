@@ -20,17 +20,17 @@ public class QHEAP1 {
             while (iterCnt-- > 0) {
                 StringTokenizer tokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
                 int nowK = parseInt(tokenizer.nextToken());
-                switch (nowK) {
-                    case 1 -> {
-                        int nowValue = parseInt(tokenizer.nextToken());
-                        queue.add(nowValue);
-                    }
-                    case 2 -> {
-                        int nowValue = parseInt(tokenizer.nextToken());
-                        queue.remove(nowValue);
-                    }
-                    default -> System.out.println(queue.peek());
-                }
+//                switch (nowK) {
+//                    case 1 -> {
+//                        int nowValue = parseInt(tokenizer.nextToken());
+//                        queue.add(nowValue);
+//                    }
+//                    case 2 -> {
+//                        int nowValue = parseInt(tokenizer.nextToken());
+//                        queue.remove(nowValue);
+//                    }
+//                    default -> System.out.println(queue.peek());
+//                }
             }
         }
     }

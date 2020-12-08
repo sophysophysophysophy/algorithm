@@ -23,18 +23,18 @@ public class MaximumElement {
             while (iterCnt-- > 0) {
                 StringTokenizer tokenizer = new StringTokenizer(bufferedReader.readLine()," ");
                 int nowK = parseInt(tokenizer.nextToken());
-                switch (nowK) {
-                    case 1 -> {
-                        int nowValue = parseInt(tokenizer.nextToken());
-                        stack.push(nowValue);
-                        queue.add(nowValue);
-                    }
-                    case 2 -> {
-                        Integer pop = stack.pop();
-                        queue.remove(pop);
-                    }
-                    default -> System.out.println(queue.peek());
-                }
+//                switch (nowK) {
+//                    case 1 -> {
+//                        int nowValue = parseInt(tokenizer.nextToken());
+//                        stack.push(nowValue);
+//                        queue.add(nowValue);
+//                    }
+//                    case 2 -> {
+//                        Integer pop = stack.pop();
+//                        queue.remove(pop);
+//                    }
+//                    default -> System.out.println(queue.peek());
+//                }
             }
         }
     }
