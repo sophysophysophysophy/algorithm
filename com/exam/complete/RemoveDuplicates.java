@@ -1,8 +1,13 @@
-package exam.todo;
+package exam.complete;
 
 
 import exam.SinglyLinkedListNode;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+//TODO UPLOAD
 //https://www.hackerrank.com/challenges/delete-duplicate-value-nodes-from-a-sorted-linked-list/problem
 public class RemoveDuplicates {
     public static void main(String[] args) {
@@ -10,29 +15,31 @@ public class RemoveDuplicates {
         SinglyLinkedListNode node6 = new SinglyLinkedListNode(4, node4);
         SinglyLinkedListNode node3 = new SinglyLinkedListNode(3, node6);
         SinglyLinkedListNode node2 = new SinglyLinkedListNode(2, node3);
-        SinglyLinkedListNode node7 = new SinglyLinkedListNode(2, node2);
+        SinglyLinkedListNode node7 = new SinglyLinkedListNode(3, node2);
         SinglyLinkedListNode node5 = new SinglyLinkedListNode(2, node7);
         SinglyLinkedListNode node1 = new SinglyLinkedListNode(2, node5);
         removeDuplicates(node1);
     }
 
     static SinglyLinkedListNode removeDuplicates(SinglyLinkedListNode head) {
-
-        if(head.next == null) return head;
-        SinglyLinkedListNode prevNode = head;
-        SinglyLinkedListNode startNode = head.next;
-
-        while (startNode.next != null) {
-            if (startNode.data != prevNode.data) {
-                prevNode.next = startNode;
-                prevNode = startNode;
-            }
-            startNode = startNode.next;
+        Set<Integer> set = new HashSet<>();
+        while (head != null) {
+            set.add(head.data);
+            head = head.next;
         }
 
-        if (startNode.data == prevNode.data) prevNode.next = null;
+        ArrayList<Integer> list = new ArrayList<>(set);
+        Collections.sort(list);
 
+        SinglyLinkedListNode startNode = new SinglyLinkedListNode(list.get(0));
+        SinglyLinkedListNode loopNode = startNode;
+        for (int i : list) {
+            SinglyLinkedListNode nowNode = new SinglyLinkedListNode(list.get(i));
+            loopNode.next = nowNode;
+            loopNode = nowNode;
 
-        return head;
+        }
+
+        return startNode;
     }
 }
