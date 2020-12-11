@@ -28,8 +28,6 @@ public class JesseAndCookies {
 
             answer++;
         }
-
-
         return answer;
     }
 }
