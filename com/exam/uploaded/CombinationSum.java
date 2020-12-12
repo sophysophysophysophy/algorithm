@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 //https://leetcode.com/problems/combination-sum/
 

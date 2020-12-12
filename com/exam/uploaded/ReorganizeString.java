@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 
 import java.util.Comparator;
 import java.util.HashMap;
@@ -74,7 +74,7 @@ public class ReorganizeString {
             }
         }
 
-//      Char array to String
+//      a char-array to String
         return new String(answerCharList);
     }
 

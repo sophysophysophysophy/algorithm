@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 //https://www.hackerrank.com/challenges/equal-stacks/problem
 //TODO UPLOAD
 import java.util.Arrays;
@@ -40,20 +40,20 @@ public class EqualStacks {
                     ((h2Height >= h1Height && h2Height >= h3Height) ? 2 : 3 );
 
             int now;
-//            switch (nowMaxHeight) {
-//                case 1 -> {
-//                    now = stack1.pop();
-//                    h1Height -= now;
-//                }
-//                case 2 -> {
-//                    now = stack2.pop();
-//                    h2Height -= now;
-//                }
-//                default -> {
-//                    now = stack3.pop();
-//                    h3Height -= now;
-//                }
-//            }
+            switch (nowMaxHeight) {
+                case 1 -> {
+                    now = stack1.pop();
+                    h1Height -= now;
+                }
+                case 2 -> {
+                    now = stack2.pop();
+                    h2Height -= now;
+                }
+                default -> {
+                    now = stack3.pop();
+                    h3Height -= now;
+                }
+            }
 
             if (h1Height == h2Height && h1Height == h3Height) return h1Height;
         }
