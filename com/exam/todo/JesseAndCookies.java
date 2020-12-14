@@ -13,9 +13,8 @@ public class JesseAndCookies {
         List<Integer> list = new ArrayList<>();
         for (int i : A) list.add(i);
         int answer = 0;
-        boolean flag = true;
 
-        while (flag) {
+        while (true) {
             if(list.size() < 2) return -1;
             int firstValue = list.remove(0);
             int secondValue = list.remove(1);
@@ -28,6 +27,5 @@ public class JesseAndCookies {
 
             answer++;
         }
-        return answer;
     }
 }
