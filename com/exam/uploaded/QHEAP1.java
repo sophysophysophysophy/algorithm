@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 //TODO UPLOAD
 //https://www.hackerrank.com/challenges/qheap1/problem
 

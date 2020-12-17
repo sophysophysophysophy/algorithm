@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class JavaInttoString {
     public static void main(String[] args) {
         String A = "df";
-        String B  = "dfjs";
+        String B  = "hello_java_string";
         System.out.println(A.length() + B.length());
         String yesOrNo = A.compareTo(B) > 0 ? "Yes" : "No";
         System.out.println(yesOrNo);

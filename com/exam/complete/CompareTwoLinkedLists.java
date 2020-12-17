@@ -6,7 +6,6 @@ package exam.complete;
 import exam.SinglyLinkedListNode;
 
 public class CompareTwoLinkedLists {
-
     static boolean compareLists(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
         if(head1.data != head2.data) return false;
         if(head1.next == null && head2.next == null) return true;
