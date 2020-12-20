@@ -10,7 +10,6 @@ public class DivideTwoIntegers {
     }
 
     public static int divide(int dividend, int divisor) {
-        if((long) dividend / divisor > Integer.MAX_VALUE) return Integer.MAX_VALUE;
-        return dividend / divisor ;
+        return (long) dividend / divisor > Integer.MAX_VALUE ? Integer.MAX_VALUE : dividend / divisor ;
     }
 }
