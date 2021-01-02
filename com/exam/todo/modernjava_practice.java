@@ -1,10 +1,21 @@
 package exam.todo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Stream;
 
 public class modernjava_practice {
+
+//    predicate function 생성
+//    public static <T> Predicate<T> distinct(Function<? super T, S> key) {
+//        return t -> (int) key % 2 == 0 ;
+//    }
+//    public static boolean distinct2(int key) {
+//        return key % 2 == 0 ;
+//    }
+
+
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         list.add(String.valueOf(1));
@@ -25,14 +36,14 @@ public class modernjava_practice {
 
 //        StreamBuilderExam
         Stream.Builder<String> builder = Stream.builder();
-        builder.accept("1");
-        builder.accept("2");
-        builder.accept("3");
-        builder.accept("4");
-        builder.accept("5");
-        builder.accept("6");
-        Stream<String> stringStream = builder.build();
-        stringStream.forEach(System.out::println);
+//        builder.accept("1");
+//        builder.accept("2");
+//        builder.accept("3");
+//        builder.accept("4");
+//        builder.accept("5");
+//        builder.accept("6");
+//        Stream<String> stringStream = builder.build();
+//        stringStream.forEach(System.out::println);
 
 //        chaining
         builder.add("1")
@@ -41,6 +52,22 @@ public class modernjava_practice {
                 .add("4")
                 .add("5")
                 .add("6").build().forEach(System.out::println);
+
+
+
+
+        Stream.Builder<Integer> builder2 = Stream.builder();
+
+//        map
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("1", 1);
+        map.put("2", 2);
+        map.put("3", 3);
+
+        map.forEach((key, value) -> System.out.println(String.format("%s , %d", key, value)));
+
+
     }
+
 
 }
