@@ -1,4 +1,4 @@
-package exam.complete;
+package exam.uploaded;
 //https://www.hackerrank.com/challenges/jesse-and-cookies/problem
 //TODO UPLOAD
 import java.util.PriorityQueue;

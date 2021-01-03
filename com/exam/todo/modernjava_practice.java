@@ -3,6 +3,8 @@ package exam.todo;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class modernjava_practice {
@@ -65,8 +67,10 @@ public class modernjava_practice {
         map.put("3", 3);
 
         map.forEach((key, value) -> System.out.println(String.format("%s , %d", key, value)));
-
-
+        list.stream().collect(Collectors.toList());
+        Function<Integer, Integer> function = Integer::intValue;
+        int apply = function.apply(100);
+        System.out.println(apply);
     }
 
 
