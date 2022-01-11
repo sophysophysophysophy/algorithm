@@ -1,4 +1,4 @@
-package exam.complete.todo;
+package exam.todo;
 //https://www.hackerrank.com/challenges/tree-top-view/problem
 
 import exam.Node;

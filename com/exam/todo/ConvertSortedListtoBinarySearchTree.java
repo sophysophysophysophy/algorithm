@@ -1,4 +1,4 @@
-package exam.complete.todo;
+package exam.todo;
 
 //https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/
 

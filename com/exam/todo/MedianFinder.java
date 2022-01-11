@@ -1,4 +1,4 @@
-package exam.complete.todo;
+package exam.todo;
 
 
 //https://leetcode.com/problems/find-median-from-data-stream/

@@ -1,4 +1,4 @@
-package exam.complete.todo;
+package exam.todo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
