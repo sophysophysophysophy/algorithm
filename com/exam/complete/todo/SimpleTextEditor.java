@@ -1,4 +1,4 @@
-package exam.todo;
+package exam.complete.todo;
 //https://www.hackerrank.com/challenges/simple-text-editor/problem
 
 import java.io.BufferedReader;

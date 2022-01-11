@@ -1,4 +1,4 @@
-package exam.todo;
+package exam.complete.todo;
 //https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/
 
 import java.util.ArrayList;

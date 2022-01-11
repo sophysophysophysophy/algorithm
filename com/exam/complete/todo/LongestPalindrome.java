@@ -1,4 +1,4 @@
-package exam.todo;
+package exam.complete.todo;
 
 
 public class LongestPalindrome {
