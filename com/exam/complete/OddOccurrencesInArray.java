@@ -38,7 +38,7 @@ public class OddOccurrencesInArray {
         return map;
     }
 
-    public static int useStream(int[] A) {
+    public static int useStreamAndMergeSolution(int[] A) {
         OddOccurrencesInArray oddOccurrencesInArray = new OddOccurrencesInArray();
         Map<Integer, Integer> map = oddOccurrencesInArray.getMapIncludeNumbersMerge(A);
         return oddOccurrencesInArray.getOddNumberInMapUseStream(map);
