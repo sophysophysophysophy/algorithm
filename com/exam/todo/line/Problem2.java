@@ -25,6 +25,16 @@ public class Problem2 {
         int num = 0;
         System.out.println(num == -1 ? "ERROR" : num);
 
+//        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));) {
+//            String input = br.readLine();
+//            String[] splitInput = input.split(" ");
+//            ArrayList<Integer> inputList = new ArrayList<>();
+//            for (String s : splitInput) {
+//                inputList.add(Integer.parseInt(s));
+//            }
+//        } catch (IOException e) {
+//            System.out.println(e);
+//        }
     }
     public static int solution(List<Integer> array) {
         List<Integer> answerList = new ArrayList<>();
@@ -47,7 +57,7 @@ public class Problem2 {
         }
 
 
-        return answerList.size() == 0 ? -1 : (answerList.stream().mapToInt(i -> i).sum()) / answerList.size();
+        return answerList.size() == 0 ? -1 : (answerList.parallelStream().mapToInt(Integer::intValue).sum()) / answerList.size();
     }
 
     @Test
