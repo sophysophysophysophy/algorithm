@@ -1,4 +1,4 @@
-package exam.todo.grammerStudy.genericSuperType;
+package exam.todo.grammerStudy.generic.superType;
 
 public class SampleDTO {
 

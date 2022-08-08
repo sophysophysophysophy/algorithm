@@ -38,8 +38,8 @@ public class AnnotationStudy {
 //        AnnotatonExam annotatonExam = new AnnotatonExam();
 //        checkAnnotation(annotatonExam, AnnotatonExam.class);
 
-//        Moja moja = new MagicMoja();      //annotation processor를 통해 생성해 낼 클래스
-//        System.out.println(moja.pullOut());
+//        Moja moja = new Moja(); //annotation processor를 통해 생성해 낼 클래스
+//        System.out.println(moja
     }
 
 }

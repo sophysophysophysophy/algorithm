@@ -48,15 +48,23 @@ public class EqualsTest extends GrammerStudy{
         InnerObjClass testObj1 = new InnerObjClass(1, 2, new int[]{1, 2, 3}, "string", "string2", new ArrayList<Integer>());
         InnerObjClass testObj2 = new InnerObjClass(1, 2, new int[]{1, 2, 3}, "string", "string2", List.of(1, 2, 3));
 
-        System.out.println("testObj2.getClass() = " + testObj2.getClass());
-        System.out.println("GrammerStudy.class = " + GrammerStudy.class);
-        System.out.println("new EqualsTest().getClass() = " + EqualsTest.class);
-        EqualsTest a = new EqualsTest();
-        System.out.println("a.getClass() = " + a.getClass());
-        System.out.println("a instanceof GrammerStudy = " + (a instanceof GrammerStudy));
-        System.out.println("testObj2.list == testObj1.list = " + (testObj2.list == testObj1.list));
-        System.out.println("testObj2.equals(testObj1) = " + testObj2.equals(testObj1));
+//        System.out.println("testObj2.getClass() = " + testObj2.getClass());
+//        System.out.println("GrammerStudy.class = " + GrammerStudy.class);
+//        System.out.println("new EqualsTest().getClass() = " + EqualsTest.class);
+//        EqualsTest a = new EqualsTest();
+//        System.out.println("a.getClass() = " + a.getClass());
+//        System.out.println("a instanceof GrammerStudy = " + (a instanceof GrammerStudy));
+//        System.out.println("testObj2.list == testObj1.list = " + (testObj2.list == testObj1.list));
+//        System.out.println("testObj2.equals(testObj1) = " + testObj2.equals(testObj1));
         //        Assertions.assertEquals(testObj1, testObj2);
+
+
+
+        System.out.println(Objects.hash(3.33) + " , " +Float.hashCode((float) 3.33));
+        System.out.println(Objects.hash(33L) + " , " + Long.hashCode(33L));
+        System.out.println(Objects.hash(true)+ " ," + Boolean.hashCode(true) + " ," + new Boolean(true).hashCode());
+
+
 
     }
 }

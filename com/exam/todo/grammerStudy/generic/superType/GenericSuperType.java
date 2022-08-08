@@ -1,4 +1,4 @@
-package exam.todo.grammerStudy.genericSuperType;
+package exam.todo.grammerStudy.generic.superType;
 
 import org.junit.jupiter.api.Test;
 
@@ -30,14 +30,22 @@ public class GenericSuperType {
         Type typeOfGenericSuperclass = myClass.getClass().getGenericSuperclass();
         System.out.println("typeOfGenericSuperclass = " + typeOfGenericSuperclass);
 
+
 //        수퍼 클래스가  ParameterizedType 이므로 ParameterizedType으로 캐스팅 가능
-//        ParameterizedType의 getActualArguments()으로 실제 타입 파라미터의 정보를 구함
+        //        ParameterizedType의 getActualArguments()으로 실제 타입 파라미터의 정보를 구함
         Type actualTypeArguments = ((ParameterizedType) typeOfGenericSuperclass).getActualTypeArguments()[0];
 
         System.out.println("actualTypeArguments = " + actualTypeArguments);
 
-        paraGenericClass paraGenericClass = new paraGenericClass();
-        paraGenericClass.<Integer>build();
+//        paraGenericClass paraGenericClass = new paraGenericClass<>();
+//        paraGenericClass.<Integer>build();
+
+//        익명 클래스 이용
+        Type genericSuperclassAnonymous = new Super<List<Integer>>() {}.getClass().getGenericSuperclass();
+
+        Type actualTypeArgument = ((ParameterizedType) genericSuperclassAnonymous).getActualTypeArguments()[0];
+        System.out.println("actualTypeArgument = " + actualTypeArgument);
+
     }
 
 

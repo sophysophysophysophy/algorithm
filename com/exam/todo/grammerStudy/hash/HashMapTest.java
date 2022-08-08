@@ -14,7 +14,7 @@ public class HashMapTest {
 //        thread safe 보장 안됨, null허용
       HashMap<String, String> map = new HashMap<>();
 
-//      동기화 보장. null 비허용.
+//      동기화 보장. null 비허용. Dictionary 클래스 상속
         Hashtable<String, String> table = new Hashtable<>();
 
 
