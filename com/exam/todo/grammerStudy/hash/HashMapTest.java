@@ -18,7 +18,7 @@ public class HashMapTest {
         Hashtable<String, String> table = new Hashtable<>();
 
 
-//        동기화 보장(thread safe). null 비허용., 메소드 전체에 synchronize block 설정
+//        동기화 보장(thread safe). null 허용., 메소드 전체에 synchronize block 설정
 //        HashTable보다 성능 우수
         ConcurrentHashMap<String, String> cmap = new ConcurrentHashMap<>();
 

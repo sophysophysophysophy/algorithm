@@ -70,8 +70,8 @@ public class Problem3 implements Comparator, Comparable{
 
         Queue<List<Integer>> queue = new LinkedList<>();
 //        Queue<List<Integer>> queue1 = new ArrayList<>();      // 불가. type은 object 하위 클래스만 가능..
-        Queue<List<Integer>> queue1 = new ArrayDeque<>();
-        LinkedList<List<Integer>> queue2 = new LinkedList<>();
+//        Queue<List<Integer>> queue1 = new ArrayDeque<>();
+//        LinkedList<List<Integer>> queue2 = new LinkedList<>();
 
 
         initQueue(n, bankbook, answer, queue);
@@ -105,7 +105,7 @@ public class Problem3 implements Comparator, Comparable{
         return answer;
     }
 
-    private static int initQueue(int n, int[] bankbook, int answer, Queue<List<Integer>> queue) {
+    private static void initQueue(int n, int[] bankbook, int answer, Queue<List<Integer>> queue) {
         for (int i = 0; i < bankbook.length -1 ; i++) {
             int nowNum = bankbook[i];
             if (checkNumSizeEqual(n, nowNum)) continue;
@@ -118,7 +118,6 @@ public class Problem3 implements Comparator, Comparable{
                 }
             }
         }
-        return answer;
     }
 
     private static ArrayList<Integer> getNewList(List<Integer> beforeList, int i, int j) {
